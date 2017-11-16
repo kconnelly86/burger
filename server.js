@@ -20,7 +20,7 @@ app.set("view engine", "handlebars");
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 // Import routes and give the server access to them.
-var router = require("./controllers/burgers_Controller.js");
+var router = require("./controllers/burgers_controller.js");
 
 app.use("/", router);
 
@@ -28,28 +28,3 @@ app.use("/", router);
 app.listen(port,function(){
 	console.log("im connected");
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

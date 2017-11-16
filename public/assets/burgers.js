@@ -5,13 +5,13 @@ $(function() {
     var newBurger = $(this).data("newburger");
 
     var newBurgerState = {
-      devoured: newburger
+      devoured: newBurger
     };
 
     // Send the PUT request.
     $.ajax("/api/burgers/" + id, {
       type: "PUT",
-      data: newburgerState
+      data: newBurgerState
     }).then(
       function() {
         console.log("changed burger to", newBurger);
@@ -26,7 +26,7 @@ $(function() {
     event.preventDefault();
 
     var newBurger = {
-      name: $("#ca").val().trim(),
+      name: $("#bu").val().trim(),
       devoured: $("[name=burger]:checked").val().trim()
     };
 
